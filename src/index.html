@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Créditos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <aside class="country-list">
+        <h2>Países disponibles</h2>
+        <ul id="country-names">
+          <!-- Los países se llenarán dinámicamente -->
+        </ul>
+      </aside>
+      <div class="container">
+        <h1>Dashboard de Créditos</h1>
+        <div class="excel-upload">
+          <label for="excel-file">Cargar archivo Excel:</label>
+          <input type="file" id="excel-file" accept=".xls,.xlsx,.csv" />
+          <span id="excel-status"></span>
+        </div>
+        <input type="text" id="country-search" placeholder="Buscar país..." />
+        <div id="stats"></div>
+        <canvas id="histogram"></canvas>
+        <canvas id="scatter"></canvas>
+        <div class="comparison-controls">
+          <h2>Comparar</h2>
+          <select id="compare-type">
+            <option value="pais">País</option>
+            <option value="anio">Año</option>
+          </select>
+          <input
+            type="text"
+            id="compare-value-1"
+            placeholder="Primer país o año"
+          />
+          <input
+            type="text"
+            id="compare-value-2"
+            placeholder="Segundo país o año"
+          />
+          <button id="compare-btn">Comparar</button>
+        </div>
+        <div id="comparison"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/simple-statistics@7.7.0/dist/simple-statistics.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

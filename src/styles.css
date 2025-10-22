@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.dashboard-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.country-list {
+  width: 300px;
+  background: #f0f6ff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-right: 0;
+  padding: 36px 22px;
+  height: 100%;
+  position: sticky;
+  top: 48px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.country-list h2 {
+  font-size: 1.18em;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #2a3a4d;
+}
+.country-list ul {
+  list-style: none;
+  padding: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+.country-list li {
+  font-size: 1.04em;
+  margin-bottom: 8px;
+  color: #2a3a4d;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+.country-list li:hover {
+  background: #dbeafe;
+  color: #174ea6;
+}
+
+.container {
+  flex: 1;
+  max-width: 1300px;
+  background: #fff;
+  padding: 56px 56px 44px 56px;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 44px;
+  font-size: 2.2em;
+  color: #2a3a4d;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 32px;
+  border-radius: 7px;
+  border: 1px solid #bcd;
+  font-size: 1.08em;
+  background: #f8fafc;
+}
+
+#stats,
+#comparison {
+  margin: 36px 0;
+  font-size: 1.12em;
+}
+
+canvas {
+  margin: 44px 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.comparison-controls {
+  margin: 44px 0;
+  padding: 32px;
+  background: #e9f0fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.comparison-controls h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 1.15em;
+}
+.comparison-controls select,
+.comparison-controls input {
+  margin: 0 16px 16px 0;
+  padding: 12px;
+  border-radius: 7px;
+  border: 1px solid #bcd;
+  font-size: 1.04em;
+  background: #f8fafc;
+}
+.comparison-controls button {
+  padding: 12px 26px;
+  border-radius: 7px;
+  border: none;
+  background: #4e79a7;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.04em;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.comparison-controls button:hover {
+  background: #174ea6;
+}
+.comp-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  margin: 20px 2%;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  font-size: 1.04em;
+}
+
+.excel-upload {
+  margin: 36px 0;
+  padding: 20px;
+  background: #f0f6ff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.excel-upload label {
+  font-weight: bold;
+  margin-right: 16px;
+  font-size: 1.04em;
+}
+.excel-upload input[type="file"] {
+  margin-right: 16px;
+}
+.excel-upload #excel-status {
+  color: #4e79a7;
+  font-weight: bold;
+  font-size: 1.04em;
+}
